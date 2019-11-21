@@ -11,7 +11,7 @@ int main() {
 	int i;
 	for (i = 0; i < 3; i++)
 	{
-		fscanf_s(file_ptr, "%s", text);
+		int count = fscanf(file_ptr, "%s", &text);
 		printf("%s\n", text);
 	}
 
