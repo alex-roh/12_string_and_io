@@ -4,18 +4,25 @@
 
 int main() {
 	
-	FILE* file_ptr;
-	file_ptr = fopen("sookmyung.txt", "r");
-	char text[MAXLENGTH];
+	char c;
+	FILE* fp;
 
-	int i;
-	for (i = 0; i < 3; i++)
+
+	fp = fopen("sookmyung.txt", "r");
+	if (fp == NULL)
 	{
-		int count = fscanf(file_ptr, "%s", &text);
-		printf("%s\n", text);
+		printf("wrong path.\n");
+		return 0;
 	}
 
-	fclose(file_ptr);
-	
+	while ((c = fgetc(fp))!= EOF) // until the end of file(EOF)
+								  // fp로부터 한 글자를 읽어오고 c에 대입
+								  // 읽어온 글자가 EOF가 아니라면 출력
+	{
+		putchar(c);
+	}
+
+	fclose(fp);
+
 	return 0;
 }
