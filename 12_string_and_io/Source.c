@@ -5,12 +5,9 @@
 
 int main() {
 	
-	char src[] = "The worst things to eat before you sleep";
-	char dst[100];
+	char str[30] = "Happy C programming!";
 
-	strcpy(dst, src);
-
-	printf("copied string : %s", dst);
+	printf("문자열 \"%s\"의 길이: %i\n", str, strlen(str));
 
 	return 0;
 }
