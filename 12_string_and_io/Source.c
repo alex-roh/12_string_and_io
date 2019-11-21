@@ -4,25 +4,11 @@
 
 int main() {
 	
-	char c;
-	FILE* fp;
+	char code1 = 'A';
+	int code2 = 65;
 
-
-	fp = fopen("sookmyung.txt", "r");
-	if (fp == NULL)
-	{
-		printf("wrong path.\n");
-		return 0;
-	}
-
-	while ((c = fgetc(fp))!= EOF) // until the end of file(EOF)
-								  // fp로부터 한 글자를 읽어오고 c에 대입
-								  // 읽어온 글자가 EOF가 아니라면 출력
-	{
-		putchar(c);
-	}
-
-	fclose(fp);
+	printf("code1 = %c, (%d)\n", code1, code1);
+	printf("code2 = %c, (%d)\n", code2, code2);
 
 	return 0;
 }
