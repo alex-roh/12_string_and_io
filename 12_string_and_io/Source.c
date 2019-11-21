@@ -1,18 +1,16 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
+#include <string.h>
 #define MAXLENGTH 100
 
 int main() {
 	
-	int i = 0;
-	char str[4];
+	char src[] = "The worst things to eat before you sleep";
+	char dst[100];
 
-	str[0] = 'a';
-	str[1] = 'b';
-	str[2] = 'c';
-	str[3] = '\0';
+	strcpy(dst, src);
 
-	printf("%s\n", str);
+	printf("copied string : %s", dst);
 
 	return 0;
 }
